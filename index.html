@@ -9,7 +9,7 @@
                 var $dst = document.getElementById("dst");
                 var changed = function () {
                     $dst.value =
-                        $src.value.replace(/^.+\d+時\d+分$/mg, "----");
+                        $src.value.replace(/^(?:.+\d+時\d+分|.+\d{4}\/\d{2}\/\d{2})$/mg, "----");
                 }
                 $src.onchange = changed;
                 $src.oninput = changed;
