@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>discord copy</title>
+        <script>
+            window.onload = function() {
+                var $src = document.getElementById("src");
+                var $dst = document.getElementById("dst");
+                var changed = function () {
+                    $dst.value =
+                        $src.value.replace(/^.+\d+時\d+分$/mg, "----");
+                }
+                $src.onchange = changed;
+                $src.oninput = changed;
+            }
+        </script>
+    </head>
+    <body>
+        <textarea id="src" cols="60" rows="40"></textarea>
+        <textarea id="dst" cols="60" rows="40"></textarea>
+    </body>
+</html>
